@@ -1,0 +1,4 @@
+<li class="favorites-list" ng-repeat="item in giphs">
+  <img class="favorite-images" src="{{item.value.images.fixed_height.url}}"/><button type="button" ng-click="deleteImage(item)">Delete</button>
+  <p am-time-ago="item.date"></p> 
+</li>
