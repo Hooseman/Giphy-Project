@@ -11,3 +11,10 @@ angular.module('giphyApp')
       }
     }
   })
+angular.module('giphyApp')
+  .directive('giphyHeader', function() {
+    return {
+      restrict: 'E',
+      template: '<h3>Search For Giphy</h3>'
+    }
+  })

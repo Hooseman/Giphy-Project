@@ -7,11 +7,11 @@ angular.module('giphyApp').controller('mainCtrl', function($scope, $interval, $s
   console.log($scope.giphs)
 
   $scope.saveGiph = function(picture) {
-    console.log("pic", picture);
     $scope.giphs.$add({
       value: picture,
       date: (new Date()).toString()
     });
+    console.log(picture);
   };
 
   $scope.deleteImage = function(picture) {
@@ -30,6 +30,9 @@ angular.module('giphyApp').controller('mainCtrl', function($scope, $interval, $s
     'fail',
     'scare'
   ];
+
+
+
   function getRandomInt() {
     var max = randomHashTags.length - 1, min = 0;
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -51,6 +54,7 @@ angular.module('giphyApp').controller('mainCtrl', function($scope, $interval, $s
 
   $scope.goToSuggestion = function(suggestion) {
     $state.go('giphy', {genre: suggestion});
+    console.log(suggestion);
   }
 
 

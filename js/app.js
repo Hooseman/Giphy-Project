@@ -1,4 +1,4 @@
-angular.module('giphyApp', ['ui.router', 'firebase', 'angularMoment'])
+angular.module('giphyApp', ['ui.router', 'firebase', 'angularMoment', 'ngClipboard'])
   .run(function($rootScope) {
       $rootScope.showTopSearch = false;
   })
@@ -27,6 +27,7 @@ angular.module('giphyApp', ['ui.router', 'firebase', 'angularMoment'])
         controller: 'giphyCtrl',
         resolve: {
           giphyData: function($stateParams, giphyService) {
+
             return giphyService.getGiphyInfo($stateParams.genre);
           }
         }

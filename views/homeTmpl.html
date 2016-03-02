@@ -8,16 +8,17 @@
       <span class="glyphicon glyphicon-share-alt"></span>
       <p>{{suggestionTwo}}</p>
     </div>
-    <div class="circle">
-      <span class="glyphicon glyphicon-share-alt" ng-click="goToSuggestion(suggestionThree)"></span>
+    <div class="circle" ng-click="goToSuggestion(suggestionThree)">
+      <span class="glyphicon glyphicon-share-alt"></span>
       <p>{{suggestionThree}}</p>
     </div>
   </div>
   <div class="jumbo-description">
-    <h3>Search For Giphy</h3>
+    <giphy-header></giphy-header>
+    <!-- <h3>Search For Giphy</h3> -->
     <div class="col-lg-6 jumbo-search">
       <form class="input-group">
-        <input type="text" class="form-control" placeholder="Search for..." ng-model="genre" clear-text>
+        <input type="text" class="form-control" placeholder="Find Giphy..." ng-model="genre" clear-text>
         <span class="input-group-btn">
         <button class="btn btn-default" ui-sref="giphy({genre: genre})" type="submit">Go!</button>
       </span>

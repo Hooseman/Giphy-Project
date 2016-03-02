@@ -6,8 +6,8 @@
 <div class="thumb-large">
   <div class="row-fluid">
     <div class="span12" ng-model='picture'>
-      <img id="image-large" ng-src="{{picture.images.fixed_height.url || giphyInfo[0].images.fixed_height.url}}"/>
-      <button id="save-button" type="button" ng-click="saveGiph(picture)">Save</button>
+      <img class="image-large" ng-src="{{picture.images.fixed_height.url || giphyInfo[0].images.fixed_height.url}}"/>
+      <button id="save-button" type="button" ng-click="saveGiph(picture)"><span class="glyphicon glyphicon-pushpin saved"></span></button>
     </div>
   </div>
 </div>

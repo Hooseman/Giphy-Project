@@ -1,4 +1,14 @@
-<li class="favorites-list" ng-repeat="item in giphs">
-  <img class="favorite-images" src="{{item.value.images.fixed_height.url}}"/><button type="button" ng-click="deleteImage(item)">Delete</button>
-  <p am-time-ago="item.date"></p> 
-</li>
+<div class="favorites-list">
+  <li ng-repeat="item in giphs">
+    <div class="favorites-image-container">
+      <img class="favorite-images" src="{{item.value.images.fixed_height.url}}" />
+      <span class="icons">
+        <span class="glyphicon glyphicon-copy literallyanything" ng-copyable ng-click="copyImage(item)"></span>
+      <span class="glyphicon glyphicon-remove"  ng-click="deleteImage(item)"></span>
+    </span>
+      <p am-time-ago="item.date"></p>
+    </div>
+  </li>
+</div>
+
+<!-- <input class="glyphicon glyphicon-remove" type="button" ng-click="deleteImage(item)"></input> -->
