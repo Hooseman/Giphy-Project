@@ -31,5 +31,5 @@ angular.module('giphyApp', ['ui.router', 'firebase', 'angularMoment', 'ngClipboa
             return giphyService.getGiphyInfo($stateParams.genre);
           }
         }
-      })
-  })
+      });
+  });

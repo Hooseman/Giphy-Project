@@ -4,7 +4,7 @@ angular.module('giphyApp').controller('mainCtrl', function($scope, $interval, $s
   $rootScope.showTopSearch = false;
 
   $scope.giphs = $firebaseArray(myFirebaseRef);
-  console.log($scope.giphs)
+  console.log($scope.giphs);
 
   $scope.saveGiph = function(picture) {
     $scope.giphs.$add({
@@ -17,7 +17,7 @@ angular.module('giphyApp').controller('mainCtrl', function($scope, $interval, $s
   $scope.deleteImage = function(picture) {
     var removeRef = new Firebase('https://giphyapp.firebaseio.com/' + picture.$id);
     removeRef.remove();
-  }
+  };
   var randomHashTags = [
     'dog',
     'fantastic',
@@ -55,8 +55,8 @@ angular.module('giphyApp').controller('mainCtrl', function($scope, $interval, $s
   $scope.goToSuggestion = function(suggestion) {
     $state.go('giphy', {genre: suggestion});
     console.log(suggestion);
-  }
+  };
 
 
 
-})
+});
