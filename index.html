@@ -9,7 +9,9 @@
 </head>
 
 <body ng-controller="mainCtrl">
-  <div class="background-still">
+
+  <ui-view></ui-view>
+  <!-- <div class="background-still">
 
 
     <nav class="navbar">
@@ -20,7 +22,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a ui-sref="home" class="navbar-brand"><img id="logo" src="images/logo.png" /></a>
+        <a ui-sref="home" class="navbar-brand"><img id="logo" src="public/images/logo.png" /></a>
       </div>
 
 
@@ -36,8 +38,7 @@
         </form>
       </div>
     </nav>
-    <ui-view></ui-view>
-  </div>
+  </div> -->
 
 
 
@@ -55,10 +56,10 @@
   <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.js"></script>
-  <script src="js/ngClipboard.js"></script>
-  <script type="text/javascript" src="js/Fader.compressed.js"></script>
+  <script src="public/js/ngClipboard.js"></script>
+  <script type="text/javascript" src="public/js/Fader.compressed.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
-  <script src='js/app.js'></script>
+  <script src='public/js/app.js'></script>
   <!-- Google Analytics -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -71,6 +72,7 @@ ga('send', 'pageview');
 </script>
 <!-- End Google Analytics -->
   <script src='public/controller/giphyCtrl.js'></script>
+  <script src='public/controller/loginCtrl.js'></script>
   <script src='public/service/giphyService.js'></script>
   <script src='public/service/dataService.js'></script>
   <script src='public/controller/mainCtrl.js'></script>

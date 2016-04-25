@@ -3,17 +3,22 @@ angular.module('giphyApp', ['ui.router', 'firebase', 'angularMoment', 'ngClipboa
       $rootScope.showTopSearch = false;
   })
   .config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('login');
 
     $stateProvider
+      .state('login', {
+        url: '/login',
+        templateUrl: 'public/views/loginTmpl.html',
+        controller: 'loginCtrl'
+      })
       .state('home', {
-        url: '/',
-        templateUrl: 'views/homeTmpl.html',
+        url: '/home',
+        templateUrl: 'public/views/homeTmpl.html',
         controller: 'mainCtrl'
       })
       .state('giphy', {
         url: '/giphy/:genre',
-        templateUrl: 'views/giphyTmpl.html',
+        templateUrl: 'public/views/giphyTmpl.html',
         controller: 'giphyCtrl',
         resolve: {
           giphyData: function($stateParams, giphyService) {
@@ -23,7 +28,7 @@ angular.module('giphyApp', ['ui.router', 'firebase', 'angularMoment', 'ngClipboa
       })
       .state('favorites', {
         url: '/favorites',
-        templateUrl: 'views/favoritesTmpl.html',
+        templateUrl: 'public/views/favoritesTmpl.html',
         controller: 'giphyCtrl',
         resolve: {
           giphyData: function($stateParams, giphyService) {
