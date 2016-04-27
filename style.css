@@ -189,6 +189,10 @@ html, body {
 .favorites-list {
   list-style-type: none;
 }
+.imac-container {
+  display: flex;
+  justify-content: center;
+}
 #wrapper, #imac {
   display: flex;
   justify-content: center;
@@ -196,17 +200,28 @@ html, body {
   flex-direction: column;
 }
 #imac {
-  width: 1400px;
-  height: 1000px;
+  width: 800px;
 }
-.image-large {
-  height: 100%;
-  width: 88%;
+.image-container {
+  width: 459px;
+  height: 223px;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 186px;
+  left: 425px;
+}
+.image {
+  width: 459px;
+  height: 223px;
+}
+/*.image-large {
+  height: 40px;
+  width: 88px;
   border-radius: 12px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
-  position: relative;
-}
+  position: absolute;
+}*/
 .saved {
 
 }

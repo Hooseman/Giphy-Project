@@ -3,8 +3,9 @@
     <img id="gif-images" ng-src="{{item.images.fixed_height.url}}" ng-click="bigPicture(item)"/>
   </li>
 </div>
+<div class="imac-container">
 <div id='imac'>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 620 338" enable-background="new 0 0 620 338" xml:space="preserve">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" style="height: 563px;" x="0px" y="0px" viewBox="0 0 620 338" enable-background="new 0 0 620 338" xml:space="preserve">
       <g>
         <g id="screen-outside">
           <g>
@@ -24,7 +25,7 @@
         <g id="">
           <g id="screen-background">
             <rect x="183" y="105.1" fill="#FFFFFF" width="274" height="132.1"></rect>
-            <image x="130" y="93.1" width="274" height="144.2" transform="scale(1.2,1)" xlink:href="http://images.anandtech.com/doci/9380/Desktop.jpg" />
+            <!-- <image x="130" y="93.1" width="274" height="144.2" transform="scale(1.2,1)" ng-src="{{picture.images.fixed_height.url}}"/> -->
           </g>
         </g>
         <g id="screen-bottom">
@@ -52,6 +53,10 @@
       </g>
     </svg>
   </div>
+</div>
+<div class="image-container" ng-model="picture">
+  <img src="{{picture.images.fixed_height.url}}" class="image"/>
+</div>
 <!-- <div class="thumb-large">
   <div class="row-fluid">
     <div class="span12" ng-model='picture'>
